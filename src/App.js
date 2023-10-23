@@ -3,8 +3,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        
+      <header className="App-header">        
         <p class="color_te">
         Здесь скоро будет Skypro.Music
         </p>
