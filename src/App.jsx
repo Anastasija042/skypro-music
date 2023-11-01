@@ -1,25 +1,24 @@
-import './App.css';
-
+import "./App.css";
+import React from "react";
+import Player from "./componets/Player";
+import Navigation from "./componets/Navigation";
+import PlayList from "./componets/PlayList";
+import MainSidebar from "./componets/MainSidebar";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">        
-        <p class="color_te">
-        Здесь скоро будет Skypro.Music
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <div className="container">
+        <main className="main">
+          <Navigation />
+          <PlayList />
+          <MainSidebar />
+        </main>
+        <Player />
+        <footer className="footer"></footer>
+      </div>
     </div>
   );
 }
-
 export default App;
 
 <div class="wrapper">
