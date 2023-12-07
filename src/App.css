@@ -881,3 +881,28 @@ body {
 .volume__progress-line {
   width: 109px;
 }
+
+.skeleton {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+  }
+  
+  
+  .skeleton-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e0e0e0;
+  animation: skeleton-loading 1.5s infinite ease-in-out;
+  }
+  
+  
+  @keyframes skeleton-loading {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(-50%); }
+  100% { transform: translateX(100%); }
+  }
