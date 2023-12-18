@@ -8,20 +8,6 @@ import SideBar from './components/SideBar/SideBar';
 import AudioPlayer from './components/AudioPlayer/AudioPlayer';
 import { useEffect, useState } from 'react';
 
-// const tracksUrl = 'https://skypro-music-api.skyeng.tech/catalog/track/all/';
-// export let tracks = [];
-// function getTracks() {
-// 	return fetch(tracksUrl, {
-// 		method: 'GET',
-// 	}).then((response) => {
-// 		if (response.status === 401) {
-// 			throw new Error('Нет авторизации')
-// 		}
-// 		return response.json()
-// 	})
-// }
-
-
 export const tracks = [
 	{
 		"id": 8,
