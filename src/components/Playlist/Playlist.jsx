@@ -1,20 +1,10 @@
 /* eslint-disable */
-import './styles.css'
 import { useEffect, useState } from 'react'
-import SkeletonSelections from '../sceletons/SkeletonSelections.js'
+import * as S from './Playlist.styles'
+import SkeletonSelections from '../sceletons/SkeletonSelections'
 
 function Playlist() {
 	const [selections, setSelection] = useState(null)
-
-	// useEffect(() => {
-	// 	setTimeout(async () => {
-	// 		const res = await fetch(
-	// 			'https://skypro-music-api.skyeng.tech/catalog/selection/',
-	// 		)
-	// 		const data = await res.json()
-	// 		setSelection(data)
-	// 	}, 5000)
-	// }, [])
 
 	useEffect(() => {
 		setTimeout(() => {
@@ -22,21 +12,17 @@ function Playlist() {
 				.then((res) => res.json())
 				.then((json) => setSelection(json))
 		}, 5000)
-	})
+	}, [])
 
 	return (
 		<>
 			{selections &&
 				selections.map((selection) => (
-					<div className="sidebar__item" key={selection.id}>
-						<a className="sidebar__link" href="index.html">
-							<img
-								className="sidebar__img"
-								src="img/playlist01.png"
-								alt="day's playlist"
-							/>
-						</a>
-					</div>
+					<S.PlayListItem key={selection.id}>
+						<S.PlayListLink href="#">
+							<S.PlayListImage src="img/playlist01.png" alt="day's playlist" />
+						</S.PlayListLink>
+					</S.PlayListItem>
 				))}
 			{!selections && [1, 2, 3].map((n) => <SkeletonSelections key={n} />)}
 		</>
